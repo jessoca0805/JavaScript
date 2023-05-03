@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tree_function</title>
+</head>
+
+<body>
+    <p>你要多大顆的聖誕樹，請給奇數:</p>
+    <input type="text" name="number" id="number">
+    <input type="button" value="請作圖" id="button" onclick="tree ()">
+    <script>
+        const number = document.getElementById('number');
+        const btn = document.getElementById('button');
+        function tree () {
+            const nb = parseInt(number.value)
+            if (nb % 2 == 0 || nb < 1) {
+                alert('你再想想，' + nb + '是奇數或是大於1嗎??');
+            } else {
+
+                document.write('<p style="font-size: 24px;";>' + '&ensp;'.repeat(nb - 1) + '^</p>')
+
+                for (let i = 2; i <= nb; i += 1) {
+                    let space = nb - i;
+                    let star = (i * 2) - 1
+                    document.write('<p style="font-size: 24px;";>' + '&ensp;'.repeat(space) + '^'.repeat(star) + '</p>')
+                }
+                document.write('<p style="font-size: 24px;";>' + '&ensp;'.repeat(nb - 1) + '^</p>')
+                document.write('<p style="font-size: 24px;";>' + '&ensp;'.repeat(nb - 1) + '^</p>')
+
+            }
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
+
+
+
+<pre>
+
+</pre>

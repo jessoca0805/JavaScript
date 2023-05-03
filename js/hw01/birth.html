@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>計算年齡</title>
+</head>
+
+<body>
+    <p>請輸入出生年月日：</p><input type="text" id="birthday" placeholder="YYYY-MM-DD"><br>
+    <input type="button" value="計算" id="calculate"><br>
+    <p id="result"></p>
+
+    <script>
+        const input_date = document.getElementById("birthday");
+        const btn = document.getElementById("calculate");
+
+        btn.addEventListener("click", () => {
+            let birth_year = input_date.value;
+            let now = new Date();
+            console.log(now);
+            let birth = new Date(birth_year);
+            // console.log(birth)
+            let age = now.getFullYear() - birth.getFullYear();
+            // console.log(age);
+            document.getElementById("result").textContent = "今年你" + age + "歲囉～～";
+        });
+
+
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<tml lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>輸入西元年，判斷是否是閏年?</title>
+    </head>
+
+    <body>
+        <div id="st1">
+            <input type="text" name="year" id="year" placeholder="請輸入西元年">
+            <input type="button" value="確認" id="button">
+
+        </div>
+        <script>
+
+            const yr = document.getElementById("year");
+            const btn = document.getElementById("button");
+            
+            btn.addEventListener("click", function () {
+                let v_year=yr.value
+                if (v_year % 4 == 0 && v_year % 100 != 0 || v_year % 400 == 00) {
+                    alert(v_year + "年是閏年");
+                } else {
+                    alert(v_year + "年是平年");
+                }
+            })
+            //year能被4整除 and 不能被100整除 ＝閏年
+            //year能被400整除＝ 閏年
+        </script>
+    </body>
+    </html>

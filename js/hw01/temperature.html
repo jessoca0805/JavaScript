@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>溫度轉換</title>
+</head>
+
+<body>
+    <p>攝氏溫度：</p><input type="number" id="c2f" placeholder="請輸入攝氏溫度" oninput="toCet()">
+    <p>華氏溫度：</p>
+    <input type="number" id="f2c" placeholder="請輸入華氏溫度" oninput="toFec()">
+    <script>
+        function toCet() {
+            let c2f = document.getElementById("c2f").value;
+
+            let fahrenheit = (c2f * 9 / 5) + 32;
+
+            document.getElementById("f2c").value = fahrenheit;
+        }
+
+        function toFec() {
+            let f2c = document.getElementById("f2c").value;
+
+            let Celsius = (f2c - 32) / 1.8;
+
+            document.getElementById("c2f").value = Celsius;
+        }
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

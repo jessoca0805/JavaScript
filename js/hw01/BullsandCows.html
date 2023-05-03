@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>猜數字遊戲</title>
+</head>
+
+<body>
+
+    <h1>猜數字遊戲</h1>
+    <input type="text" name="guess" id="guess" placeholder="請輸入猜測的數字(1~100)，輸入0離開遊戲">
+    <input type="button" value="送出" id="button">
+
+    <script>
+
+        let num = Math.random()
+        console.log(num); //0-1之間的值
+        console.log(num * 100); //0-1之間的值
+        //Math.floor() 無條件捨去
+        let guessNum = Math.floor(num * 100); //取整數
+        console.log(guessNum)
+
+        //獲取資訊
+        const guessField = document.getElementById('guess');
+        const guessbtn = document.getElementById('button');
+
+        guessbtn.addEventListener("click", () => {
+
+            if (guessField.value == 0) {
+                alert('謝謝再聯絡!');
+                window.close();
+            } else if (guessField.value == guessNum) {
+                alert('猜中數字 =' + guessNum)
+            } else if (guessField.value > guessNum) {
+                alert('數字太大!')
+            } else {
+                alert('數字太小!')
+            }
+        }
+        );
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

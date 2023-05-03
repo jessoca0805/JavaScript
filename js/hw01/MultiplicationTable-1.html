@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table_function</title>
+    <style>
+        * {
+            margin: 0;
+            height: 0;
+        }
+
+        table {
+            margin: 100px auto;
+            border: 2px solid #2894FF;
+            border-collapse: collapse;
+            background-color: #D2E9FF;
+            color: #613030;
+            text-align: left;
+        }
+
+        td {
+            padding-left: 20px;
+            padding-right: 0px;
+            width: 55px;
+            border: 2px solid #0000C6;
+            padding-right: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <script>
+
+        document.write("<table>");
+        function Multiplication () {
+            for (let i = 2; i <= 9; i++) {
+                document.write("<td>")
+                for (let j = 1; j <= 9; j++) {
+                    document.write(`${i}*${j}=${i * j}\n`)
+                }
+                document.write(`</td>`)
+            }
+            document.write(`</table>`)
+        }
+        Multiplication()
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

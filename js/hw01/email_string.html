@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>email驗證_tring</title>
+</head>
+
+<body>
+    <p>請輸入email:</p><input type="text" name="mail" id="idmail" placeholder="Ex:1245@gmail.com">
+    <input type="button" value="確認" id="button" onclick="checkMail()">
+    <script>
+
+        function checkMail () {
+            const mail = document.getElementById("idmail");
+            // console.log(mail);
+            let V_mail = mail.value;
+            // console.log(typeof V_mail);
+            //使用string物件檢查電子郵件中要有 @ . 以及 @ 不能重複
+            if (V_mail.indexOf("@") == -1 || V_mail.indexOf(".") == -1) {
+                alert("錯誤，請輸入正確mail格式");
+            } else if (V_mail.indexOf("@") !== V_mail.lastIndexOf("@")) {
+                alert("錯誤，重複輸入到＠囉～");
+            } else {
+                alert("正確！")
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // const v_mail = document.getElementById("mail");
+        // const btn = document.getElementById("button");
+
+        // function VaildEmail () {
+
+        //     let st1 = v_mail.value;
+        //     console.log(VaildEmail);
+
+        // }
+
+        // btn.addEventListener("click", VaildEmail);
+
+
+
+    </script>
+</body>
+
+</html>
